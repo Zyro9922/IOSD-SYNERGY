@@ -1,0 +1,292 @@
+<resources>
+
+    <string name="app_name">OriginalSynergyGo</string>
+
+    <string-array name="neighbourFeedback">
+        <item>KNOW THWE APPLICANT</item>
+        <item>DO NOT KNOW THE APPLICANT</item>
+        <item>NA</item>
+
+    </string-array>
+
+    <string-array name="localityType">
+        <item>POSH</item>
+        <item>MEDIUM</item>
+        <item>POOR</item>
+        <item>VILLAGE AREA</item>
+        <item>NO INFO</item>
+    </string-array>
+
+
+    <string-array name="resstatus">
+        <item>SELF OWNED</item>
+        <item>OWNED BY RELATIVES</item>
+        <item>RENTED</item>
+        <item>PAYING GUEST</item>
+        <item>OWNED BY PARENTS</item>
+        <item>OWNED BY FRIENDS</item>
+        <item>COMPANY ACCOMMODATION</item>
+    </string-array>
+
+    <string-array name="vehicle">
+        <item>TWO WHEELER</item>
+        <item>FOUR WHEELER</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="marital">
+        <item>SINGLE</item>
+        <item>MARRIED</item>
+
+    </string-array>
+
+    <string-array name="propertyType">
+        <item>LAND</item>
+        <item>INDEPENDENT HOUSE</item>
+        <item>FLAT</item>
+        <item>BUNGLOW</item>
+        <item>NO INFO</item>
+    </string-array>
+
+    <string-array name="noOfYearsWithPresentOwner">
+        <item>BY BIRTH</item>
+        <item>> 5 YEARS </item>
+        <item> MORE THAN 3 YEARS AND LESS THAN 5 YEARS </item>
+        <item> MORE THAN 2 YEARS AND LESS THAN 3</item>
+        <item> MORE THAN 1 YWAR AND LESS THAN 2</item>
+
+        <item>NO INFO</item>
+    </string-array>
+
+    <string-array name="company">
+        <item>PUBLIC LIMITED</item>
+        <item>PRIVATE LIMITED</item>
+        <item>PARTNERSHIP</item>
+        <item>PROPRIETORSHIP</item>
+        <item>OTHER</item>
+    </string-array>
+    <string-array name="transfer">
+        <item>YES</item>
+        <item>NO</item>
+
+    </string-array>
+
+
+    <string-array name="jobtype">
+        <item>"PERMANENT"</item>
+        <item>"PROBATION"</item>
+        <item>"CONTRACT WORKER"</item>
+        <item>"TEMPORARY WORKER"</item>
+        <item>"OTHERS"</item>
+    </string-array>
+
+    <string-array name="workorg">
+        <item>"TYPIST"</item>
+        <item>"STENOGRAPHER"</item>
+        <item>"SUPERVISOR"</item>
+        <item>"JUNIOR MANAGEMENT"</item>
+        <item>"MIDDLE MANAGEMENT"</item>
+        <item>"SENIOR MANAGEMENT"</item>
+        <item>"OTHER MANAGEMENT"</item>
+    </string-array>
+
+    <string-array name="locality">
+        <item>POSH LOCALITY</item>
+        <item>VILLAGE AREA</item>
+        <item>LODGING</item>
+        <item>UPPER MIDDLE CLASS</item>
+        <item>LOWER MIDDLE CLASS</item>
+        <item>SLUM LOCALITY</item>
+        <item>MIDDLE CLASS</item>
+        <item>RESIDENTIAL COMPLEX</item>
+        <item>OTHERS</item>
+    </string-array>
+
+    <string-array name="name_board">
+        <item>YES</item>
+        <item>NO</item>
+    </string-array>
+    <string-array name="ambiance">
+        <item>INTERIOR</item>
+        <item>EXTERIOR</item>
+        <item>NO INFO</item>
+    </string-array>
+    <string-array name="visitingcard">
+        <item>YES</item>
+        <item>NO</item>
+    </string-array>
+    <string-array name="exteriors">
+        <item>AVERAGE</item>
+        <item>GOOD</item>
+        <item>POOR</item>
+    </string-array>
+    <string-array name="easy_locate">
+        <item>EASY</item>
+        <item>DIFFICULT</item>
+    </string-array>
+    <string-array name="business_Act">
+        <item>HIGH</item>
+        <item>MEDIUM</item>
+        <item>LOW</item>
+    </string-array>
+    <string-array name="aff_pol_party">
+        <item>YES</item>
+        <item>NO</item>
+    </string-array>
+    <string-array name="emp_sighted">
+        <item>YES</item>
+        <item>NO</item>
+    </string-array>
+    <string-array name="polite_rude">
+        <item>POLITE</item>
+        <item>RUDE</item>
+    </string-array>
+    <string-array name="n_check">
+        <item>POSITIVE</item>
+        <item>NEGATIVE</item>
+    </string-array>
+    <string-array name="recom_or_not">
+        <item>RECOMMENDED</item>
+        <item>NOT RECOMMENDED</item>
+    </string-array>
+
+    <string-array name="rel_appl">
+        <item>SELF</item>
+        <item>SPOUSE</item>
+        <item>MOTHER</item>
+        <item>FATHER</item>
+        <item>BROTHER</item>
+        <item>SISTER</item>
+        <item>HUSBAND</item>
+        <item>BHABHI</item>
+        <item>NEIGHBOURS</item>
+        <item>EMPLOYEE</item>
+        <item>RELATIVE</item>
+        <item>OTHERS</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="edu">
+        <item>10TH PASS</item>
+        <item>12TH PASS</item>
+        <item>GRADUATE</item>
+        <item>POST GRADUATE</item>
+    </string-array>
+
+    <!--ZYRO-->
+
+
+    <string-array name="easeLoc">
+        <item>EASY</item>
+        <item>DIFFICULT</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="officeOwnership">
+        <item>OWNED</item>
+        <item>RENTED</item>
+        <item>LEASED</item>
+        <item>OTHER</item>
+
+    </string-array>
+
+
+    <string-array name="typeLocality">
+        <item>COMMERCIAL</item>
+        <item>"PROBATION"</item>
+        <item>RESIDENTIAL</item>
+        <item>RESI CUM COMMERCIAL</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="natureOfBusi">
+        <item>PROFESSIONAL</item>
+        <item>MANUFACTURES</item>
+        <item>TRADERS</item>
+        <item>SHOPKEEPER</item>
+        <item>SERVICE PROVIDER</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="busiSetup">
+        <item>YES</item>
+        <item>NO</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="busiBoard">
+        <item>YES</item>
+        <item>NO</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="visitingCard">
+        <item>YES</item>
+        <item>NO</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="yesNo">
+        <item>YES</item>
+        <item>NO</item>
+        <item>NO INFO</item>
+    </string-array>
+
+    <string-array name="appliVerifiedfrom">
+        <item>SELF</item>
+        <item>COWORKER</item>
+        <item>RECEPTION</item>
+        <item>SECURITY</item>
+        <item>OTHER</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="verifFeed">
+        <item>KNOW THE APPLICANT</item>
+        <item>DO NOT KNOW THE APPLICANT</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="polLink">
+        <item>NA</item>
+        <item>TWO WHEELER</item>
+        <item>FOUR WHEELER</item>
+    </string-array>
+
+    <string-array name="vehical">
+        <item>YES</item>
+        <item>NO</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="negative">
+        <item>NA</item>
+        <item>POOR LIVING CONDITION</item>
+        <item>NEGATIVE AREA</item>
+        <item>DOOR LOCKED</item>
+        <item>PERSON DOES NOT EXIST</item>
+        <item>DOOR LOCKES</item>
+        <item>PERSON DOES NOT EXIST</item>
+        <item>NOT READY TO CO-OPERATE</item>
+        <item>DEFAULTER</item>
+        <item>BAD MARKET REPUTATION</item>
+        <item>ADDRESS NOT TRACEABLE</item>
+        <item>NOT EXIST</item>
+        <item>DETAILS MISMATCH</item>
+        <item>NEGATIVE INFO</item>
+        <item>ANY OTHER REASON</item>
+        <item>RESTRICTED AREA</item>
+        <item>STABILITY LESS THAN 1 YEAR</item>
+    </string-array>
+
+    <string-array name="status">
+        <item>RECOMMENDED</item>
+        <item>NOT RECOMMENDED</item>
+        <item>REFERAL</item>
+    </string-array>
+
+    <!--ZYRO-->
+
+
+</resources>

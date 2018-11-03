@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mohitkumar.originalsynergygo.Activities.LocationPhoto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click on the camera below to upload images"
+            android:padding="10dp"
+            android:textColor="@color/darkblue"
+            android:gravity="center"
+            android:id="@+id/adres"
+            />
+
+        <!--ZYRO added image view-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_weight="9"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/darkblue"
+            android:onClick="exitfunc"
+            android:id="@+id/exit"
+            android:text="Exit"
+            android:visibility="gone"
+            android:textColor="#fff"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            />
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pho"
+        android:src="@drawable/cameraicon"
+        app:backgroundTint="@color/darkblue"
+        android:onClick="onc"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        />
+</RelativeLayout>
