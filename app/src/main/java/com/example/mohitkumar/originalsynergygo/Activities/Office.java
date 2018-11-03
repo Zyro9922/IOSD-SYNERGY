@@ -49,22 +49,27 @@ public class Office extends AppCompatActivity {
 
 
 
-    EditText name,designation,mobile,joinDate,desigApp,noYears,companyNature,remarks,detsalary,orgname;
-    String sname;
-    String sdesignation;
-    String smobile;
-    String sjoinDate;
-    String sdesigApp;
-    String snoYears;
-    String scompanyNature;
-    String sremarks;
-    String sjobType;
-    String sworkOrg;
-    String sjobTransfer;
-    String sdetsalary;
-    EditText detvarsal;
+    EditText caseNo,location,applicantName,address,alternateTelephone, dsaClientName,fosName,
+            companyName,landmark,designationofApplicant,personMet,designationOfPersonMet,personContact,
+            officeTelephone,dateOfJoining,noOfEmp, personcontacted, designation,
+            nameOfreportManager, designationOfReportManager, contactOfReportManager, salary, tpcPersonName;
+
+    String scaseNo,slocation,sapplicantName,saddress,salternateTelephone, sdsaClientName,sfosName,
+            scompanyName,slandmark,sdesignationofApplicant,spersonMet,sdesignationOfPersonMet,spersonContact,
+            sofficeTelephone,sdateOfJoining,snoOfEmp, spersoncontacted, sdesignation,
+            snameOfreportManager, sdesignationOfReportManager, scontactOfReportManager, ssalary, stpcPersonName;
+
+    Spinner pdaNo,typeOfLocality, addressConfirmed, doesapplicantWork, officeNameBoardSeen, typeOfOrganisation, visitingCardObtained,
+            natureOfBusiness, jobType, workingAs, whetherJobisTransferrable, easetoLocate, tcpConfirmation, overallStatus,
+            reasonForNegative;
+
+    String spdaNo,stypeOfLocality, saddressConfirmed, sdoesapplicantWork, sofficeNameBoardSeen, stypeOfOrganisation, svisitingCardObtained,
+            snatureOfBusiness, sjobType, sworkingAs, swhetherJobisTransferrable, seasetoLocate, stcpConfirmation, soverallStatus, sreasonForNegative;
+
     String filestr,sdetvarsal,applorcoappl;
+
     ProgressDialog dialog;
+
     Button refresh;
     private double latitude = 0;
     private double longitude = 0;
@@ -72,10 +77,11 @@ public class Office extends AppCompatActivity {
     public static final int LOCATION_REQ_CODE = 100;
     public static final int EXTERNAL_STORAGE_CODE = 101;
     LocationManager locationManager;
-    Spinner jobType,workOrg,jobTransfer,recomm;
-    ArrayAdapter<CharSequence> jobtypeadapter;
-    ArrayAdapter<CharSequence> workorgadapter;
-    ArrayAdapter<CharSequence> jobtransferadapter,recommadapter;
+//    Spinner jobType,workOrg,jobTransfer,recomm;
+
+    ArrayAdapter<CharSequence> pdaNoadapter,typeOfLocalityadapter, addressConfirmedadapter, doesapplicantWorkadapter, officeNameBoardSeenadapter, typeOfOrganisationadapter, visitingCardObtainedadapter,
+            natureOfBusinessadapter, jobtypeadapter, workingAsadapter, whetherJobisTransferrableadapter, easetoLocateadapter, tcpConfirmationadapter, overallStatusadapter, reasonForNegativeadapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,51 +90,115 @@ public class Office extends AppCompatActivity {
         applorcoappl = getIntent().getStringExtra("appl_coappl");
         Log.d("TAG",applorcoappl);
         filestr = getIntent().getStringExtra("uniid");
-        name=(EditText)findViewById(R.id.personconteditText);
-        designation=(EditText)findViewById(R.id.desigPCeditText);
-        mobile=(EditText)findViewById(R.id.mobPCeditText);
-        //joinDate=(EditText)findViewById(R.id.DateAppjoineditText);
-        desigApp=(EditText)findViewById(R.id.DesgAppeditText);
-        noYears=(EditText)findViewById(R.id.yearseditText);
-        companyNature=(EditText)findViewById(R.id.CompanyNatureeditText);
-        remarks=(EditText)findViewById(R.id.OtherRemarkseditText);
-        jobType=(Spinner)findViewById(R.id.jobtypespinner);
-        workOrg=(Spinner)findViewById(R.id.workingAsspinner);
-        jobTransfer=(Spinner)findViewById(R.id.transferspinner);
-        detsalary = (EditText)findViewById(R.id.det_ver);
-        detvarsal = (EditText) findViewById(R.id.desig_ver);
-        orgname = (EditText) findViewById(R.id.nameoforganisation);
-        recomm = (Spinner)findViewById(R.id.recomm);
+        caseNo=(EditText)findViewById(R.id.caseNo);
+        designation=(EditText)findViewById(R.id.designation);
+        location=(EditText)findViewById(R.id.location);
+        applicantName=(EditText)findViewById(R.id.applicantName);
+        address=(EditText)findViewById(R.id.address);
+        alternateTelephone=(EditText)findViewById(R.id.altTele);
+        dsaClientName=(EditText)findViewById(R.id.dsaClientName);
+        fosName=(EditText)findViewById(R.id.fosName);
+        companyName=(EditText)findViewById(R.id.companyName);
+        landmark=(EditText)findViewById(R.id.landmark);
+        designationofApplicant=(EditText)findViewById(R.id.designationOfApplicant);
+        personMet=(EditText)findViewById(R.id.personMet);
+        designationOfPersonMet=(EditText)findViewById(R.id.desigOfPersonMet);
+        personContact=(EditText)findViewById(R.id.personContactNo);
+        officeTelephone=(EditText)findViewById(R.id.officeTelephone);
+        dateOfJoining=(EditText)findViewById(R.id.dateOfJoining);
+        noOfEmp=(EditText)findViewById(R.id.noOfEmp);
+        personcontacted=(EditText)findViewById(R.id.personContacted);
+        nameOfreportManager=(EditText)findViewById(R.id.nameOfReportingManager);
+        designationOfReportManager=(EditText)findViewById(R.id.designOfReportingManager);
+        contactOfReportManager=(EditText)findViewById(R.id.contactNoOfReportingManager);
+        salary=(EditText)findViewById(R.id.salary);
+        tpcPersonName=(EditText)findViewById(R.id.tpcPersonName);
+
+        pdaNo = (Spinner) findViewById(R.id.pdaNo);
+        typeOfLocality = (Spinner) findViewById(R.id.localityType);
+        addressConfirmed = (Spinner) findViewById(R.id.addressConfirmed);
+        doesapplicantWork = (Spinner) findViewById(R.id.doesApplicantWork);
+        officeNameBoardSeen = (Spinner) findViewById(R.id.officeNameBoardSeen);
+        typeOfOrganisation = (Spinner) findViewById(R.id.organisationType);
+        visitingCardObtained = (Spinner) findViewById(R.id.visitingCardObtained);
+        natureOfBusiness = (Spinner) findViewById(R.id.natureOfBusi);
+        jobType = (Spinner) findViewById(R.id.typeOfJob);
+        workingAs = (Spinner) findViewById(R.id.workingAs);
+        whetherJobisTransferrable = (Spinner) findViewById(R.id.jobTransferable);
+        easetoLocate = (Spinner) findViewById(R.id.easeToLocate);
+        tcpConfirmation = (Spinner) findViewById(R.id.tpcConfirmation);
+        overallStatus = (Spinner) findViewById(R.id.overallStatus);
+        reasonForNegative = (Spinner) findViewById(R.id.reasonfornegativeFI);
+
+
+
+
 
         jobtypeadapter=ArrayAdapter.createFromResource(this,R.array.jobtype,R.layout.support_simple_spinner_dropdown_item);
         jobtypeadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         jobType.setAdapter(jobtypeadapter);
 
+        pdaNoadapter=ArrayAdapter.createFromResource(this,R.array.jobtype,R.layout.support_simple_spinner_dropdown_item);
+        pdaNoadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        pdaNo.setAdapter(pdaNoadapter);
+
+        typeOfLocalityadapter=ArrayAdapter.createFromResource(this,R.array.typeOfLocalityDD,R.layout.support_simple_spinner_dropdown_item);
+        typeOfLocalityadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        typeOfLocality.setAdapter(typeOfLocalityadapter);
+
+        addressConfirmedadapter=ArrayAdapter.createFromResource(this,R.array.transfer,R.layout.support_simple_spinner_dropdown_item);
+        addressConfirmedadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        addressConfirmed.setAdapter(addressConfirmedadapter);
+
+        doesapplicantWorkadapter=ArrayAdapter.createFromResource(this,R.array.yesNo,R.layout.support_simple_spinner_dropdown_item);
+        doesapplicantWorkadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        doesapplicantWork.setAdapter(doesapplicantWorkadapter);
+
+        officeNameBoardSeenadapter=ArrayAdapter.createFromResource(this,R.array.yesNo,R.layout.support_simple_spinner_dropdown_item);
+        officeNameBoardSeenadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        officeNameBoardSeen.setAdapter(officeNameBoardSeenadapter);
+
+        typeOfOrganisationadapter=ArrayAdapter.createFromResource(this,R.array.typeofOrganisationDD,R.layout.support_simple_spinner_dropdown_item);
+        typeOfOrganisationadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        typeOfOrganisation.setAdapter(typeOfOrganisationadapter);
+
+        visitingCardObtainedadapter=ArrayAdapter.createFromResource(this,R.array.yesNo,R.layout.support_simple_spinner_dropdown_item);
+        visitingCardObtainedadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        visitingCardObtained.setAdapter(visitingCardObtainedadapter);
+
+        natureOfBusinessadapter=ArrayAdapter.createFromResource(this,R.array.natureOfBusi,R.layout.support_simple_spinner_dropdown_item);
+        natureOfBusinessadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        natureOfBusiness.setAdapter(natureOfBusinessadapter);
+
+        workingAsadapter=ArrayAdapter.createFromResource(this,R.array.workingAs,R.layout.support_simple_spinner_dropdown_item);
+        workingAsadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        workingAs.setAdapter(workingAsadapter);
+
+        whetherJobisTransferrableadapter=ArrayAdapter.createFromResource(this,R.array.yesNo,R.layout.support_simple_spinner_dropdown_item);
+        whetherJobisTransferrableadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        whetherJobisTransferrable.setAdapter(whetherJobisTransferrableadapter);
+
+        easetoLocateadapter=ArrayAdapter.createFromResource(this,R.array.easy_locateDD,R.layout.support_simple_spinner_dropdown_item);
+        easetoLocateadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        easetoLocate.setAdapter(easetoLocateadapter);
+
+        tcpConfirmationadapter=ArrayAdapter.createFromResource(this,R.array.positiveNegativeDD,R.layout.support_simple_spinner_dropdown_item);
+        tcpConfirmationadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        tcpConfirmation.setAdapter(tcpConfirmationadapter);
+
+        overallStatusadapter=ArrayAdapter.createFromResource(this,R.array.recom_or_notDD,R.layout.support_simple_spinner_dropdown_item);
+        overallStatusadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        overallStatus.setAdapter(overallStatusadapter);
+
+        reasonForNegativeadapter=ArrayAdapter.createFromResource(this,R.array.reasonForNegative,R.layout.support_simple_spinner_dropdown_item);
+        reasonForNegativeadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        reasonForNegative.setAdapter(reasonForNegativeadapter);
+
+
         jobType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                switch (i)
-                {
-
-                    case 0:
-                        sjobType="Permanent";
-                        break;
-                    case 1:
-                        sjobType="Probation";
-                        break;
-                    case 2:
-                        sjobType="Contract Worker";
-                        break;
-                    case 3:
-                        sjobType="Temporary Worker";
-                        break;
-                    case 4:
-                        sjobType="Others";
-                        break;
-
-                }
-
             }
 
             @Override
@@ -137,40 +207,10 @@ public class Office extends AppCompatActivity {
             }
         });
 
-        workorgadapter=ArrayAdapter.createFromResource(this,R.array.workorg,R.layout.support_simple_spinner_dropdown_item);
-        workorgadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        workOrg.setAdapter(workorgadapter);
-
-        workOrg.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        pdaNo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                switch (i)
-                {
-                    case 0:
-                        sworkOrg="Typist";
-                        break;
-                    case 1:
-                        sworkOrg="Stenographer";
-                        break;
-                    case 2:
-                        sworkOrg="Supervisor";
-                        break;
-                    case 3:
-                        sworkOrg="Junior Management";
-                        break;
-                    case 4:
-                        sworkOrg="Middle Management";
-                        break;
-                    case 5:
-                        sworkOrg="Senior Management";
-                        break;
-                    case 6:
-                        sworkOrg="Other Management";
-                        break;
-
-                }
-
+                spdaNo = pdaNo.getSelectedItem().toString();
             }
 
             @Override
@@ -179,34 +219,176 @@ public class Office extends AppCompatActivity {
             }
         });
 
-        jobtransferadapter=ArrayAdapter.createFromResource(this,R.array.transfer,R.layout.support_simple_spinner_dropdown_item);
-        jobtransferadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        jobTransfer.setAdapter(jobtransferadapter);
-
-        jobTransfer.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        typeOfLocality.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                switch(i)
-                {
-                    case 0:
-                        sjobTransfer="Yes";
-                        break;
-                    case 1:
-                        sjobTransfer="No";
-                        break;
-                }
-
+                stypeOfLocality = typeOfLocality.getSelectedItem().toString();
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
 
-        recommadapter=ArrayAdapter.createFromResource(this,R.array.recom_or_not,R.layout.support_simple_spinner_dropdown_item);
-        recommadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        recomm.setAdapter(jobtransferadapter);
+        addressConfirmed.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                saddressConfirmed = addressConfirmed.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        doesapplicantWork.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sdoesapplicantWork = doesapplicantWork.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        officeNameBoardSeen.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sofficeNameBoardSeen = officeNameBoardSeen.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        typeOfOrganisation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                stypeOfOrganisation = typeOfOrganisation.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        visitingCardObtained.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                svisitingCardObtained= visitingCardObtained.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        natureOfBusiness.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                snatureOfBusiness = natureOfBusiness.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        workingAs.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sworkingAs = workingAs.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        whetherJobisTransferrable.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                swhetherJobisTransferrable = whetherJobisTransferrable.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        easetoLocate.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                seasetoLocate = easetoLocate.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        tcpConfirmation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                stcpConfirmation = tcpConfirmation.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        overallStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                soverallStatus = overallStatus.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        reasonForNegative.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sreasonForNegative = reasonForNegative.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
+
 
         lat = (TextView) findViewById(R.id.lat);
         lng = (TextView) findViewById(R.id.lng);
@@ -268,19 +450,32 @@ public class Office extends AppCompatActivity {
 
     public void onClickNextso1(View view) {
         filestr=getIntent().getStringExtra("uniid");
-        sname=name.getText().toString().trim();
-        sdesignation=designation.getText().toString();
-        smobile=mobile.getText().toString().trim();
-//        sjoinDate=joinDate.getText().toString().trim();
-        sworkOrg = workOrg.getSelectedItem().toString();
-        sdesigApp=desigApp.getText().toString().trim();
-        snoYears=noYears.getText().toString().trim();
-        scompanyNature=companyNature.getText().toString().trim();
-        sremarks=remarks.getText().toString().trim();
-        sdetsalary = detsalary.getText().toString().trim();
-        sdetvarsal = detvarsal.getText().toString().trim();
-        final String sorgname = orgname.getText().toString();
-        final String recom = recomm.getSelectedItem().toString();
+
+        scaseNo = caseNo.getText().toString();
+        slocation = caseNo.getText().toString();
+        sapplicantName = caseNo.getText().toString();
+        saddress = caseNo.getText().toString();
+        salternateTelephone = caseNo.getText().toString();
+        sdsaClientName = caseNo.getText().toString();
+        sfosName = caseNo.getText().toString();
+        scompanyName = caseNo.getText().toString();
+        slandmark = caseNo.getText().toString();
+        sdesignationofApplicant = caseNo.getText().toString();
+        spersonMet = caseNo.getText().toString();
+        sdesignationOfPersonMet = caseNo.getText().toString();
+        spersonContact = caseNo.getText().toString();
+        sofficeTelephone = caseNo.getText().toString();
+        sdateOfJoining = caseNo.getText().toString();
+        snoOfEmp = caseNo.getText().toString();
+        spersoncontacted = caseNo.getText().toString();
+        sdesignation = caseNo.getText().toString();
+        snameOfreportManager = caseNo.getText().toString();
+        sdesignationOfReportManager = caseNo.getText().toString();
+        scontactOfReportManager = caseNo.getText().toString();
+        ssalary = caseNo.getText().toString();
+        stpcPersonName = caseNo.getText().toString();
+
+
         final String latt = lat.getText().toString();
         final String longi = lng.getText().toString();
         Log.d("LONGITUDE",longi);
@@ -309,7 +504,7 @@ public class Office extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-               // progressDialog.dismiss();
+                // progressDialog.dismiss();
                 Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
             }
         }){
@@ -324,29 +519,29 @@ public class Office extends AppCompatActivity {
                 } else if(applorcoappl.equals("COAPPLICANT2")){
                     params.put("tablename","coappl2_employment");
                 }
-              
 
-                params.put("REFNO",filestr);
-                params.put("PERSONMET",sname);
-                params.put("DESIGNAPPL",sdesigApp);
-                params.put("PERSONDESIGN",sdesignation);
-                params.put("PERSONPHONE",smobile);
-                params.put("NOOFYEARS",snoYears);
-                params.put("ORGNAME",sorgname);
-                params.put("ORGNATURE",scompanyNature);
-                params.put("JOBTYPE",sjobType);
-                params.put("WORKINGAS",sworkOrg);
-                params.put("TRANSFERABLE",sjobTransfer);
-                params.put("SALARYPERSON",sdetsalary);
-                params.put("SALARYDESIGN",sdetvarsal);
-                params.put("RECOMM",recom);
-                params.put("REMARKS",sremarks);
-                Log.d("LONG",longi);
-                params.put("LATITUDE",latt);
-                params.put("LONGITUDE",longi);
-
-                params.put("DATEVISIT",date);
-                params.put("TIMEVISIT",time);
+//
+//                params.put("REFNO",filestr);
+//                params.put("PERSONMET",sname);
+//                params.put("DESIGNAPPL",sdesigApp);
+//                params.put("PERSONDESIGN",sdesignation);
+//                params.put("PERSONPHONE",smobile);
+//                params.put("NOOFYEARS",snoYears);
+//                params.put("ORGNAME",sorgname);
+//                params.put("ORGNATURE",scompanyNature);
+//                params.put("JOBTYPE",sjobType);
+//                params.put("WORKINGAS",sworkOrg);
+//                params.put("TRANSFERABLE",sjobTransfer);
+//                params.put("SALARYPERSON",sdetsalary);
+//                params.put("SALARYDESIGN",sdetvarsal);
+//                params.put("RECOMM",recom);
+//                params.put("REMARKS",sremarks);
+//                Log.d("LONG",longi);
+//                params.put("LATITUDE",latt);
+//                params.put("LONGITUDE",longi);
+//
+//                params.put("DATEVISIT",date);
+//                params.put("TIMEVISIT",time);
                 return params;
 
             }
