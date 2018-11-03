@@ -48,12 +48,20 @@ import java.util.Map;
 
 public class Residence extends AppCompatActivity {
 
-    EditText name,noFamilyMem,workingMem,dependMem,children,twowheeler,fourwheeler,spouseEmp,registration,carpetArea,otherRemarks,mob,noyears,doba,nnoff;
-    String sname,snoFamilyMem,sworkingMem,sdependMem,schildren,sspouseEmp,sresidence,smaritalStatus,slocality,sspousework,srecomm,snnoff;
-    Spinner residence,maritalStatus,locality,resambience,ncheck,clientcoop,spousework,addlock,relapp,recomm,eduqual;
-    ArrayAdapter<CharSequence> residenceadapter,ambienceadapter,educAdapter;
-    ArrayAdapter<CharSequence> maritaladapter,ncheckadapter,recommadapter;
-    ArrayAdapter<CharSequence> localityadapter,spouseworkadapter,clientcoopadapter,addlockadapter,relationadapter;
+    EditText caseNo,location,applicantName,address,alternateTelephone,fosName,age,landmark,stayingSince,personContacted,noFamilyMem,working,dependMemAdult, dependMemChild,retiredorpensioner,spouseEmp, neibhourName1, neibhourName2, address1, address2, addProof;
+
+    String scaseNo,slocation,sapplicantName,saddress,salternateTelephone,sfosName,sage,slandmark,sstayingSince,spersonContacted,snoFamilyMem,sworking,sdependMemAdult, sdependMemChild,sretiredorpensioner,sspouseEmp, sneibhourName1, sneibhourName2, saddress1, saddress2, saddProof;
+
+    Spinner pdaNo, easetoLocate,typeOfLocality,typeOfHouse,houseCondition,ownership,standardOfLiving,doesApplicantStay, relationship ,
+            exterior, spouseEarning, maritalStatus, educationQualification, neighbourFeedback,accomodationType,vehicleSeen, politicalLink,
+            overallStatus, resonfornegativeFI;
+
+    String spdaNo, seasetoLocate,stypeOfLocality,stypeOfHouse,shouseCondition,sownership,sstandardOfLiving,sdoesApplicantStay,srelationship ,
+            sexterior, sspouseEarning, smaritalStatus, seducationQualification, sneighbourFeedback,saccomodationType,svehicleSeen, spoliticalLink,
+            soverallStatus, sresonfornegativeFI;
+
+    ArrayAdapter<CharSequence> pdaNoadapter, easetoLocateadapter,typeOfLocalityadapter,typeOfHouseadapter,houseConditionadapter,ownershipadapter,standardOfLivingadapter,doesApplicantStayadapter, relationshipadapter ,exterioradapter, spouseEarningadapter, maritaladapter, educationQualificationadapter, neighbourFeedbackadapter,accomodationTypeadapter,vehicleSeenadapter, politicalLinkadapter, overallStatusadapter, resonfornegativeFIadapter;
+
     LinearLayout linearLayout;
     Button refresh;
     ProgressDialog dialog;
@@ -80,67 +88,60 @@ public class Residence extends AppCompatActivity {
         Log.d("TAG",applorcoappl);
 
         linearLayout = (LinearLayout) findViewById(R.id.lin_s_emp);
-        name= (EditText)findViewById(R.id.Personnameet);
-        noFamilyMem=(EditText)findViewById(R.id.FamilymemeditText);
-        workingMem=(EditText)findViewById(R.id.workingmemeditText);
-        dependMem=(EditText)findViewById(R.id.dependenteditText);
-        children=(EditText)findViewById(R.id.ChildreneditText);
+        caseNo= (EditText)findViewById(R.id.caseNo);
+        noFamilyMem=(EditText)findViewById(R.id.noOfFamilyMember);
+        location=(EditText)findViewById(R.id.location);
+        applicantName=(EditText)findViewById(R.id.applicantName);
+        address=(EditText)findViewById(R.id.address);
         spouseEmp=(EditText)findViewById(R.id.SpouseeditText);
-        residence =(Spinner) findViewById(R.id.ResStatusSpinner);
+        pdaNo =(Spinner) findViewById(R.id.pdaNo);
         maritalStatus=(Spinner) findViewById(R.id.MaritalStatusSpinner);
-        locality=(Spinner) findViewById(R.id.Localityspinner);
-        registration= (EditText)findViewById(R.id.RegNoeditText);
-        carpetArea= (EditText)findViewById(R.id.CarpetAreaeditText);
+        easetoLocate=(Spinner) findViewById(R.id.easeToLocate);
+        alternateTelephone= (EditText)findViewById(R.id.altTele);
+        fosName= (EditText)findViewById(R.id.fosName);
         //politicalInflu= (EditText)findViewById(R.id.PoliticaleditText);
-        otherRemarks= (EditText)findViewById(R.id.OtherRemarkseditText);
-        twowheeler=(EditText) findViewById(R.id.two_wheeler);
-        fourwheeler = (EditText) findViewById(R.id.fourwheelerseen);
-        resambience = (Spinner) findViewById(R.id.res_ambience);
-        relapp = (Spinner) findViewById(R.id.rel_Appl);
-        mob = (EditText) findViewById(R.id.mobno);
-        recomm = (Spinner) findViewById(R.id.recomm);
-        noyears = (EditText) findViewById(R.id.noyears);
-        doba = (EditText) findViewById(R.id.dobapp);
-        addlock = (Spinner) findViewById(R.id.add_check);
-        eduqual = (Spinner) findViewById(R.id.eduqual);
-        ncheck = (Spinner) findViewById(R.id.neighbour_check);
-        clientcoop = (Spinner) findViewById(R.id.coopspinner);
-        nnoff = (EditText) findViewById(R.id.snnoffam);
-        spousework = (Spinner)findViewById(R.id.SpouseWorkSpinner);
+        age= (EditText)findViewById(R.id.age);
+        landmark=(EditText) findViewById(R.id.landmark);
+        stayingSince = (EditText) findViewById(R.id.stayingSince);
+        typeOfLocality = (Spinner) findViewById(R.id.localityType);
+        typeOfHouse = (Spinner) findViewById(R.id.houseType);
+        houseCondition = (Spinner) findViewById(R.id.houseCondition);
+        personContacted = (EditText) findViewById(R.id.personContacted);
+        ownership = (Spinner) findViewById(R.id.ownership);
+        noFamilyMem = (EditText) findViewById(R.id.noOfFamilyMember);
+        working = (EditText) findViewById(R.id.working);
+        standardOfLiving = (Spinner) findViewById(R.id.standardOfLiving);
+        doesApplicantStay = (Spinner) findViewById(R.id.doesApplicantStay);
+        relationship = (Spinner) findViewById(R.id.relationship);
+        accomodationType = (Spinner) findViewById(R.id.accomodationType);
+        dependMemAdult = (EditText) findViewById(R.id.dependentAdult);
+        exterior = (Spinner)findViewById(R.id.exterior);
+        dependMemChild = (EditText) findViewById(R.id.dependentChild);
+        retiredorpensioner = (EditText) findViewById(R.id.retiredorpensioner);
+        spouseEmp = (EditText) findViewById(R.id.spouseWorkingDetail);
+        spouseEarning = (Spinner)findViewById(R.id.spouseEarning);
+        maritalStatus = (Spinner)findViewById(R.id.maritialStatus);
+        educationQualification = (Spinner)findViewById(R.id.educationQulification);
+        neibhourName1 = (EditText) findViewById(R.id.neighbouName1);
+        neibhourName2 = (EditText) findViewById(R.id.neighbouName2);
+        address1 = (EditText) findViewById(R.id.address1);
+        address2 = (EditText) findViewById(R.id.address2);
+        addProof = (EditText) findViewById(R.id.addproof);
+        neighbourFeedback = (Spinner)findViewById(R.id.neighbourhoodFeedback);
+        vehicleSeen = (Spinner)findViewById(R.id.vehicalSeen);
+        politicalLink = (Spinner)findViewById(R.id.politicalLink);
+        overallStatus = (Spinner)findViewById(R.id.overallStatus);
+        resonfornegativeFI = (Spinner)findViewById(R.id.reasonfornegativeFI);
 
-        residenceadapter=ArrayAdapter.createFromResource(this,R.array.resstatus,R.layout.support_simple_spinner_dropdown_item);
-        residenceadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        residence.setAdapter(residenceadapter);
 
-        residence.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        pdaNoadapter=ArrayAdapter.createFromResource(this,R.array.resstatus,R.layout.support_simple_spinner_dropdown_item);
+        pdaNoadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        pdaNo.setAdapter(pdaNoadapter);
+
+        pdaNo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i)
-                {
-                    case 0:
-                        sresidence="Self Owned";
-                        break;
-                    case 1:
-                        sresidence="Owned By Relatives";
-                        break;
-                    case 2:
-                        sresidence=" Rented";
-                        break;
-                    case 3:
-                        sresidence="Paying Guest";
-                        break;
-                    case 4:
-                        sresidence="Owned by Parents";
-                        break;
-                    case 5:
-                        sresidence=" Owned by Friends";
-                        break;
-                    case 6:
-                        sresidence="Company Accommodation";
-                        break;
-                }
-
-
+                spdaNo = pdaNo.getSelectedItem().toString();
             }
 
             @Override
@@ -156,14 +157,7 @@ public class Residence extends AppCompatActivity {
         maritalStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                switch (i) {
-                    case 0:
-                        smaritalStatus = "Single";
-                        break;
-                    case 1:
-                        smaritalStatus = "Married";
-                }
+                smaritalStatus = maritalStatus.getSelectedItem().toString();
 
             }
 
@@ -173,37 +167,85 @@ public class Residence extends AppCompatActivity {
             }
         });
 
-        clientcoopadapter=ArrayAdapter.createFromResource(this,R.array.polite_rude,R.layout.support_simple_spinner_dropdown_item);
-        clientcoopadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        clientcoop.setAdapter(clientcoopadapter);
+        easetoLocateadapter=ArrayAdapter.createFromResource(this,R.array.easy_locate,R.layout.support_simple_spinner_dropdown_item);
+        easetoLocateadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        easetoLocate.setAdapter(easetoLocateadapter);
 
-        ncheckadapter=ArrayAdapter.createFromResource(this,R.array.n_check,R.layout.support_simple_spinner_dropdown_item);
-        ncheckadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        ncheck.setAdapter(ncheckadapter);
+        typeOfLocalityadapter=ArrayAdapter.createFromResource(this,R.array.localityType,R.layout.support_simple_spinner_dropdown_item);
+        typeOfLocalityadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        typeOfLocality.setAdapter(typeOfLocalityadapter);
 
-        addlockadapter=ArrayAdapter.createFromResource(this,R.array.transfer,R.layout.support_simple_spinner_dropdown_item);
-        addlockadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        addlock.setAdapter(addlockadapter);
+        typeOfHouseadapter=ArrayAdapter.createFromResource(this,R.array.houseType,R.layout.support_simple_spinner_dropdown_item);
+        typeOfHouseadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        typeOfHouse.setAdapter(typeOfHouseadapter);
 
-        spouseworkadapter = ArrayAdapter.createFromResource(this,R.array.transfer,R.layout.support_simple_spinner_dropdown_item);
-        spouseworkadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        spousework.setAdapter(spouseworkadapter);
+        houseConditionadapter = ArrayAdapter.createFromResource(this,R.array.exteriors,R.layout.support_simple_spinner_dropdown_item);
+        houseConditionadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        houseCondition.setAdapter(houseConditionadapter);
 
-        spousework.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        ownershipadapter = ArrayAdapter.createFromResource(this,R.array.ownership,R.layout.support_simple_spinner_dropdown_item);
+        ownershipadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        ownership.setAdapter(ownershipadapter);
+
+        standardOfLivingadapter = ArrayAdapter.createFromResource(this,R.array.exteriors,R.layout.support_simple_spinner_dropdown_item);
+        standardOfLivingadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        standardOfLiving.setAdapter(standardOfLivingadapter);
+
+        doesApplicantStayadapter = ArrayAdapter.createFromResource(this,R.array.yesNo,R.layout.support_simple_spinner_dropdown_item);
+        doesApplicantStayadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        doesApplicantStay.setAdapter(doesApplicantStayadapter);
+
+        relationshipadapter = ArrayAdapter.createFromResource(this,R.array.rel_appl,R.layout.support_simple_spinner_dropdown_item);
+        relationshipadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        relationship.setAdapter(relationshipadapter);
+
+        exterioradapter = ArrayAdapter.createFromResource(this,R.array.exteriors,R.layout.support_simple_spinner_dropdown_item);
+        exterioradapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        exterior.setAdapter(exterioradapter);
+
+        spouseEarningadapter = ArrayAdapter.createFromResource(this,R.array.yesNo,R.layout.support_simple_spinner_dropdown_item);
+        spouseEarningadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        spouseEarning.setAdapter(spouseEarningadapter);
+
+//        maritaladapter = ArrayAdapter.createFromResource(this,R.array.transfer,R.layout.support_simple_spinner_dropdown_item);
+//        maritaladapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+//        maritalStatus.setAdapter(maritaladapter);
+
+        educationQualificationadapter = ArrayAdapter.createFromResource(this,R.array.educationQualification,R.layout.support_simple_spinner_dropdown_item);
+        educationQualificationadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        educationQualification.setAdapter(educationQualificationadapter);
+
+        neighbourFeedbackadapter = ArrayAdapter.createFromResource(this,R.array.neighbourFeedback,R.layout.support_simple_spinner_dropdown_item);
+        neighbourFeedbackadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        neighbourFeedback.setAdapter(neighbourFeedbackadapter);
+
+        accomodationTypeadapter = ArrayAdapter.createFromResource(this,R.array.accomodationType,R.layout.support_simple_spinner_dropdown_item);
+        accomodationTypeadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        accomodationType.setAdapter(accomodationTypeadapter);
+
+        vehicleSeenadapter = ArrayAdapter.createFromResource(this,R.array.vehicaldd,R.layout.support_simple_spinner_dropdown_item);
+        vehicleSeenadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        vehicleSeen.setAdapter(vehicleSeenadapter);
+
+        politicalLinkadapter = ArrayAdapter.createFromResource(this,R.array.yesNo,R.layout.support_simple_spinner_dropdown_item);
+        politicalLinkadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        politicalLink.setAdapter(politicalLinkadapter);
+
+        overallStatusadapter = ArrayAdapter.createFromResource(this,R.array.recom_or_notDD,R.layout.support_simple_spinner_dropdown_item);
+        overallStatusadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        overallStatus.setAdapter(overallStatusadapter);
+
+        resonfornegativeFIadapter = ArrayAdapter.createFromResource(this,R.array.negative,R.layout.support_simple_spinner_dropdown_item);
+        resonfornegativeFIadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        resonfornegativeFI.setAdapter(resonfornegativeFIadapter);
+
+
+
+
+        easetoLocate.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                switch (i) {
-                    case 0:
-                        sspousework = "YES";
-                        spouseEmp.setVisibility(View.VISIBLE);
-                        linearLayout.setVisibility(View.VISIBLE);
-                        break;
-                    case 1:
-                        sspousework = "NO";
-                        linearLayout.setVisibility(View.GONE);
-                        spouseEmp.setVisibility(View.GONE);
-                }
+                seasetoLocate = easetoLocate.getSelectedItem().toString();
 
             }
 
@@ -213,57 +255,10 @@ public class Residence extends AppCompatActivity {
             }
         });
 
-        ambienceadapter = ArrayAdapter.createFromResource(this,R.array.ambience,R.layout.support_simple_spinner_dropdown_item);
-        ambienceadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        resambience.setAdapter(ambienceadapter);
-
-        educAdapter = ArrayAdapter.createFromResource(this, R.array.edu, R.layout.support_simple_spinner_dropdown_item);
-        educAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        eduqual.setAdapter(educAdapter);
-
-        recommadapter = ArrayAdapter.createFromResource(this, R.array.recom_or_not, R.layout.support_simple_spinner_dropdown_item);
-        recommadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        recomm.setAdapter(recommadapter);
-
-        localityadapter=ArrayAdapter.createFromResource(this,R.array.locality,R.layout.support_simple_spinner_dropdown_item);
-        localityadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        locality.setAdapter(localityadapter);
-
-        locality.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        typeOfLocality.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                switch (i)
-                {
-
-                    case 0:
-                        slocality="Posh Locality";
-                        break;
-                    case 1:
-                        slocality="Village Area";
-                        break;
-                    case 2:
-                        slocality="Lodging";
-                        break;
-                    case 3:
-                        slocality="Upper Middle Class";
-                        break;
-                    case 4:
-                        slocality="Lower Middle Class";
-                        break;
-                    case 5:
-                        slocality="Slum Locality";
-                        break;
-                    case 6:
-                        slocality="Middle Class";
-                        break;
-                    case 7:
-                        slocality="Residential Complex";
-                        break;
-                    case 8:
-                        slocality="Others";
-                        break;
-                }
+                stypeOfLocality = typeOfLocality.getSelectedItem().toString();
 
             }
 
@@ -273,9 +268,214 @@ public class Residence extends AppCompatActivity {
             }
         });
 
-        relationadapter = ArrayAdapter.createFromResource(this,R.array.rel_appl,R.layout.support_simple_spinner_dropdown_item);
-        relationadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        relapp.setAdapter(relationadapter);
+        typeOfHouse.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                stypeOfHouse = typeOfHouse.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        houseCondition.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                shouseCondition = houseCondition.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        ownership.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sownership = ownership.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        standardOfLiving.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sstandardOfLiving = standardOfLiving.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        doesApplicantStay.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sdoesApplicantStay = doesApplicantStay.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        relationship.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                srelationship = relationship.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        exterior.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sexterior = exterior.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        spouseEarning.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sspouseEarning = spouseEarning.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+//        maritalStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//                smaritalStatus = maritalStatus.getSelectedItem().toString();
+//
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
+
+
+        educationQualification.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                seducationQualification = educationQualification.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        neighbourFeedback.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sneighbourFeedback = neighbourFeedback.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        accomodationType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                saccomodationType = accomodationType.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        vehicleSeen.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                svehicleSeen = vehicleSeen.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        politicalLink.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                spoliticalLink = politicalLink.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        overallStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                soverallStatus = overallStatus.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        resonfornegativeFI.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sresonfornegativeFI = resonfornegativeFI.getSelectedItem().toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
 
         lat = (TextView) findViewById(R.id.lat);
@@ -353,33 +553,39 @@ public class Residence extends AppCompatActivity {
 
     public void onClicknextsr1(View view) {
 
-        sname = name.getText().toString();
+//        EditText caseNo,location,applicantName,address,alternateTelephone,fosName,age,landmark,stayingSince,
+// personContacted,noFamilyMem,working,dependMemAdult, dependMemChild,retiredorpensioner,spouseEmp, neibhourName1,
+// neibhourName2, address1, address2, addProof;
+
+
+        scaseNo = caseNo.getText().toString();
         snoFamilyMem = noFamilyMem.getText().toString();
-        sworkingMem = workingMem.getText().toString();
-        sdependMem = dependMem.getText().toString();
-        schildren = children.getText().toString();
+        slocation = location.getText().toString();
+        sapplicantName = applicantName.getText().toString();
+        saddress = address.getText().toString();
         sspouseEmp = spouseEmp.getText().toString();
-        sresidence = residence.getSelectedItem().toString();
         smaritalStatus = maritalStatus.getSelectedItem().toString();
-        slocality = locality.getSelectedItem().toString();
-        sregistration = registration.getText().toString();
-        scarpetArea = carpetArea.getText().toString();
+        salternateTelephone = alternateTelephone.getText().toString();
+        sfosName = fosName.getText().toString();
         //spoliticalInflu = politicalInflu.getText().toString();
-        sotherRemarks = otherRemarks.getText().toString();
-        srelapp = relapp.getSelectedItem().toString();
-        smob = mob.getText().toString();
-        snoyears = noyears.getText().toString();
-        sdoba = doba.getText().toString();
-        seduqual = eduqual.getSelectedItem().toString();
-        saddlock = addlock.getSelectedItem().toString();
-        srecomm = recomm.getSelectedItem().toString();
-        snnoff = nnoff.getText().toString();
-        final String sncheck =ncheck.getSelectedItem().toString();
-        final String sclientcoop = clientcoop.getSelectedItem().toString();
-        final String stwo = twowheeler.getText().toString();
-        final String sfour = fourwheeler.getText().toString();
-        sspousework = spousework.getSelectedItem().toString();
-        final String sambience = resambience.getSelectedItem().toString();
+        sage = age.getText().toString();
+        slandmark = landmark.getText().toString();
+        sstayingSince = stayingSince.getText().toString();
+        spersonContacted = personContacted.getText().toString();
+        snoFamilyMem = noFamilyMem.getText().toString();
+        sworking = working.getText().toString();
+        sdependMemAdult = dependMemAdult.getText().toString();
+        sretiredorpensioner = retiredorpensioner.getText().toString();
+        sspouseEmp = spouseEmp.getText().toString();
+        sneibhourName1 = neibhourName1.getText().toString();
+        sneibhourName2 = neibhourName2.getText().toString();
+        saddress1 = address1.getText().toString();
+        saddress2 = address2.getText().toString();
+        saddProof = addProof.getText().toString();
+
+
+
+
         final String latt = lat.getText().toString();
         Log.d("LATITUDE",latt);
         final String longi = lng.getText().toString();
@@ -408,7 +614,7 @@ public class Residence extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-               // progressDialog.dismiss();
+                // progressDialog.dismiss();
                 error.printStackTrace();
                 Toast.makeText(getApplicationContext(),"No connection",Toast.LENGTH_LONG).show();
             }
@@ -428,38 +634,38 @@ public class Residence extends AppCompatActivity {
                     params.put("tablename","coappl2_residence");
                 }
 
-                params.put("REFNO",filestr);
-                params.put("DATEVISIT",date);
-                params.put("TIMEVISIT",time);
-                params.put("PERSONMET",sname);
-                params.put("RELATIONAPPL",srelapp);
-                params.put("PERSONPHONE",smob);
-                params.put("NOOFYEARS",snoyears);
-                params.put("DOBAPPL",sdoba);
-                params.put("EDUQUAL",seduqual);
-                params.put("RESISTATUS",sresidence);
-                params.put("MARITALSTATUS",smaritalStatus);
-                params.put("NOOFFAMILY",snoFamilyMem);
-                params.put("WORKING",sworkingMem);
-                params.put("ADULTSDEP",sdependMem);
-                params.put("CHILDDEP",schildren);
-                params.put("SPOUSEWORK",sspousework);
-                params.put("SPOUSEEMP",sspouseEmp);
-                params.put("COOPERATIVE",sclientcoop);
-                params.put("NEIGHBORHOOD",sncheck);
-                params.put("LOCALITY",slocality);
-                params.put("AMBIENCE",sambience);
-                params.put("CARPETAREA",scarpetArea);
-                params.put("NAPPLSTAY",saddlock);
-                params.put("NNOOFFAMILY",snnoff);
-                params.put("WHEELER2",stwo);
-                params.put("WHEELER4",sfour);
-                Log.d("LATT",latt);
-                params.put("LATITUDE",latt);
-                params.put("LONGITUDE",longi);
-
-                params.put("RECOMM",srecomm);
-                params.put("REMARKS",sotherRemarks);
+//                params.put("REFNO",filestr);
+//                params.put("DATEVISIT",date);
+//                params.put("TIMEVISIT",time);
+//                params.put("PERSONMET",sname);
+//                params.put("RELATIONAPPL",srelapp);
+//                params.put("PERSONPHONE",smob);
+//                params.put("NOOFYEARS",snoyears);
+//                params.put("DOBAPPL",sdoba);
+//                params.put("EDUQUAL",seduqual);
+//                params.put("RESISTATUS",sresidence);
+//                params.put("MARITALSTATUS",smaritalStatus);
+//                params.put("NOOFFAMILY",snoFamilyMem);
+//                params.put("WORKING",sworkingMem);
+//                params.put("ADULTSDEP",sdependMem);
+//                params.put("CHILDDEP",schildren);
+//                params.put("SPOUSEWORK",sspousework);
+//                params.put("SPOUSEEMP",sspouseEmp);
+//                params.put("COOPERATIVE",sclientcoop);
+//                params.put("NEIGHBORHOOD",sncheck);
+//                params.put("LOCALITY",slocality);
+//                params.put("AMBIENCE",sambience);
+//                params.put("CARPETAREA",scarpetArea);
+//                params.put("NAPPLSTAY",saddlock);
+//                params.put("NNOOFFAMILY",snnoff);
+//                params.put("WHEELER2",stwo);
+//                params.put("WHEELER4",sfour);
+//                Log.d("LATT",latt);
+//                params.put("LATITUDE",latt);
+//                params.put("LONGITUDE",longi);
+//
+//                params.put("RECOMM",srecomm);
+//                params.put("REMARKS",sotherRemarks);
 
                 return params;
             }

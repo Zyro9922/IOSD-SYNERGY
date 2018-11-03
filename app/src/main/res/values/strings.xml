@@ -288,5 +288,62 @@
 
     <!--ZYRO-->
 
+    <!--Divyanshu-->
+
+    <string-array name="houseType">
+        <item>BUNGLOW</item>
+        <item>RAW HOUSE</item>
+        <item>FLAT</item>
+        <item>CHAWL</item>
+        <item>INDEPENDENT</item>
+        <item>OTHER</item>
+    </string-array>
+
+    <string-array name="ownership">
+        <item>SELF</item>
+        <item>COMPANY PROVIDED</item>
+        <item>PARENTS</item>
+        <item>RENTED WITH FAMILY</item>
+        <item>GOVT. PROVIDED</item>
+        <item>RELATIVE</item>
+        <item>PAIN GUEST</item>
+        <item>BACHELOR ACCOMODATION/HOSTEL</item>
+        <item>RENTED BACHELOR</item>
+    </string-array>
+
+
+    <string-array name="accomodationType">
+        <item>WITH PARENTS</item>
+        <item>RELATIVES</item>
+        <item>NUCLEAR FAMILY</item>
+        <item>BACHELOR</item>
+        <item>SHARED ACCOMODATION</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="educationQualification">
+        <item>PROFFESIONAL</item>
+        <item>POST GRADUATE</item>
+        <item>UNDERGRADUATE</item>
+        <item>GRADUATE</item>
+        <item>OTHERS</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="vehicaldd">
+        <item>NA</item>
+        <item>TWO WHEELER</item>
+        <item>FOUR WHEELER</item>
+    </string-array>
+
+    <string-array name="recom_or_notDD">
+        <item>RECOMMENDED</item>
+        <item>NOT RECOMMENDED</item>
+        <item>REFFERAL</item>
+    </string-array>
+
+    <!--divyanshu-->
+
+
 
 </resources>

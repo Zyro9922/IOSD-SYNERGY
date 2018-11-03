@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OriginalSynergy-master copy.iml" filepath="$PROJECT_DIR$/OriginalSynergy-master copy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IOSD-SYNERGY.iml" filepath="$PROJECT_DIR$/IOSD-SYNERGY.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
