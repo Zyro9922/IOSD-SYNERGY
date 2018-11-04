@@ -198,12 +198,12 @@ public class Office extends AppCompatActivity {
         jobType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
+                sjobType = jobType.getSelectedItem().toString();
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                sjobType = "";
             }
         });
 
@@ -215,7 +215,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                spdaNo = "";
             }
         });
 
@@ -227,7 +227,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                stypeOfLocality = "";
             }
         });
 
@@ -240,7 +240,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                saddressConfirmed = "";
             }
         });
 
@@ -253,7 +253,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                sdoesapplicantWork = "";
             }
         });
 
@@ -266,7 +266,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                sofficeNameBoardSeen = "";
             }
         });
 
@@ -279,7 +279,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                stypeOfOrganisation = "";
             }
         });
 
@@ -292,7 +292,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                svisitingCardObtained = "";
             }
         });
 
@@ -305,7 +305,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                snatureOfBusiness = "";
             }
         });
 
@@ -318,7 +318,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                sworkingAs = "";
             }
         });
 
@@ -331,7 +331,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                swhetherJobisTransferrable = "";
             }
         });
 
@@ -344,7 +344,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                seasetoLocate = "";
             }
         });
 
@@ -357,7 +357,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                stcpConfirmation = "";
             }
         });
 
@@ -370,7 +370,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                soverallStatus = "";
             }
         });
 
@@ -383,7 +383,7 @@ public class Office extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                sreasonForNegative = "";
             }
         });
 
