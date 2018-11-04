@@ -146,7 +146,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                spdaNo = "";
             }
         });
 
@@ -163,7 +163,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                smaritalStatus = "";
             }
         });
 
@@ -251,7 +251,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                seasetoLocate = "";
             }
         });
 
@@ -264,7 +264,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                stypeOfLocality = "";
             }
         });
 
@@ -277,7 +277,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                stypeOfHouse = "";
             }
         });
 
@@ -290,7 +290,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                shouseCondition ="";
             }
         });
 
@@ -303,7 +303,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                sownership = "";
             }
         });
 
@@ -316,7 +316,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                sstandardOfLiving = "";
             }
         });
 
@@ -329,7 +329,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                sdoesApplicantStay = "";
             }
         });
 
@@ -342,7 +342,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                srelationship = "";
             }
         });
 
@@ -355,7 +355,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                sexterior = "";
             }
         });
 
@@ -368,7 +368,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                sspouseEarning = "";
             }
         });
 
@@ -395,7 +395,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                seducationQualification = "";
             }
         });
 
@@ -408,7 +408,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                sneighbourFeedback = "";
             }
         });
 
@@ -421,7 +421,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                saccomodationType = "";
             }
         });
 
@@ -434,7 +434,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                svehicleSeen = "";
             }
         });
 
@@ -447,7 +447,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                spoliticalLink = "";
             }
         });
 
@@ -460,7 +460,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                soverallStatus = "";
             }
         });
 
@@ -473,7 +473,7 @@ public class Residence extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                sresonfornegativeFI ="";
             }
         });
 
