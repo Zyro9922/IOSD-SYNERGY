@@ -93,9 +93,9 @@ public class Residence extends AppCompatActivity {
         location=(EditText)findViewById(R.id.location);
         applicantName=(EditText)findViewById(R.id.applicantName);
         address=(EditText)findViewById(R.id.address);
-        spouseEmp=(EditText)findViewById(R.id.SpouseeditText);
+        spouseEmp=(EditText)findViewById(R.id.spouseWorkingDetail);
         pdaNo =(Spinner) findViewById(R.id.pdaNo);
-        maritalStatus=(Spinner) findViewById(R.id.MaritalStatusSpinner);
+        maritalStatus=(Spinner) findViewById(R.id.maritialStatus);
         easetoLocate=(Spinner) findViewById(R.id.easeToLocate);
         alternateTelephone= (EditText)findViewById(R.id.altTele);
         fosName= (EditText)findViewById(R.id.fosName);
