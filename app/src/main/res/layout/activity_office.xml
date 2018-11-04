@@ -15,13 +15,17 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:paddingLeft="10dp"
             android:elevation="5dp"
             android:layout_marginBottom="10dp"
             >
@@ -30,10 +34,10 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:elevation="1dp"
+                android:paddingLeft="10dp"
                 android:layout_marginBottom="30dp"
                 >
                 <LinearLayout
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -42,7 +46,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:text="Designation of applicant"
+                        android:text="Case No."
                         android:textAppearance="?android:textAppearanceLarge"
                         />
                     <TextView
@@ -57,253 +61,21 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/DesgAppeditText"
-                    android:layout_marginRight="30dp"
+                    android:id="@+id/caseNo"
                     android:inputType="textPersonName"
-                    />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:text="Name of person Contacted"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="*"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="#ee4242"
-                        />
-                </LinearLayout>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/personconteditText"
-                    android:layout_marginRight="30dp"
-                    android:inputType="textPersonName"
-                    />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:text="Designation of person contacted"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="*"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="#ee4242"
-                        />
-                </LinearLayout>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/desigPCeditText"
-                    android:layout_marginRight="30dp"
-                    android:inputType="textPersonName"
-                    />
-                <LinearLayout
-                    android:layout_marginTop="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:text="Mobile"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="*"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="#ee4242"
-                        />
-                </LinearLayout>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/mobPCeditText"
-                    android:layout_marginRight="30dp"
-                    android:inputType="number"
-                    />
-                <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:text="Years since present job"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="*"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="#ee4242"
-                        />
-                </LinearLayout>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/yearseditText"
-                    android:inputType="number"
                     android:layout_marginRight="30dp"
                     />
-                <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:text="Name of Organisation"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="*"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="#ee4242"
-                        android:layout_weight="1"
-                        />
-                </LinearLayout>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/nameoforganisation"
-                    android:layout_marginRight="30dp"
-                    android:inputType="textPersonName"
-                    />
-                <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:text="Nature of company's business"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="*"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="#ee4242"
-                        android:layout_weight="1"
-                        />
-                </LinearLayout>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/CompanyNatureeditText"
-                    android:layout_marginRight="30dp"
-                    android:inputType="textPersonName"
-                    />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="15dp"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:text="Type of Job"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="*"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="#ee4242"
-                        />
-                </LinearLayout>
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="50dp"
-                    android:id="@+id/jobtypespinner"
-                    >
-                </Spinner>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="15dp"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:text="Working in organsation as"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="*"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="#ee4242"
-                        />
-                </LinearLayout>
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="50dp"
-                    android:id="@+id/workingAsspinner"
-                    >
-                </Spinner>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
                     >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:text="Job Transferable"
+                        android:text="Location"
                         android:textAppearance="?android:textAppearanceLarge"
                         />
                     <TextView
@@ -315,66 +87,23 @@
                         android:textColor="#ee4242"
                         />
                 </LinearLayout>
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="50dp"
-                    android:id="@+id/transferspinner"
-                    >
-                </Spinner>
-                <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:text="Details of salary verified from whom?"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        />
-                </LinearLayout>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/det_ver"
-                    android:layout_marginRight="30dp"
+                    android:id="@+id/location"
                     android:inputType="textPersonName"
-                    />
-                <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:text="Designation of the person who verified?"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        />
-                </LinearLayout>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/desig_ver"
                     android:layout_marginRight="30dp"
-                    android:inputType="textPersonName"
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="15dp"
                     >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:text="Recommended or not"
+                        android:text="Applicant Name"
                         android:textAppearance="?android:textAppearanceLarge"
                         />
                     <TextView
@@ -386,25 +115,53 @@
                         android:textColor="#ee4242"
                         />
                 </LinearLayout>
-                <Spinner
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="50dp"
-                    android:id="@+id/recomm"
-                    >
-                </Spinner>
+                    android:id="@+id/applicantName"
+                    android:inputType="number"
+                    android:layout_marginRight="30dp"
+                    />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
                     >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:text="Other Remarks"
+                        android:text="Address"
                         android:textAppearance="?android:textAppearanceLarge"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/address"
+                    android:inputType="number"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Alternate Telephone No."
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
                         />
                 </LinearLayout>
                 <EditText
@@ -412,9 +169,962 @@
                     android:layout_height="50dp"
                     android:gravity="top"
                     android:inputType="textPersonName"
-                    android:id="@+id/OtherRemarkseditText"
+                    android:id="@+id/altTele"
                     android:layout_marginRight="30dp"
                     />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="DSA/Client Name"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="top"
+                    android:inputType="textPersonName"
+                    android:id="@+id/dsaClientName"
+                    android:layout_marginRight="30dp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="PDA No"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/pdaNo"
+                    >
+                </Spinner>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="FOS Name"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fosName"
+                    android:inputType="number"
+                    android:layout_marginRight="30dp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Company Name"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/companyName"
+                    android:inputType="number"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Type of Locality"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/localityType"
+                    ></Spinner>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Address Confirmed"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/addressConfirmed"
+                    ></Spinner>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lin_s_emp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Landmark"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/landmark"
+                    android:layout_marginRight="30dp"
+                    android:inputType="textPersonName"
+                    />
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Designation of Applicant (s)"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/designationOfApplicant"
+                    android:layout_marginRight="30dp"
+                    android:inputType="textPersonName"
+                    />
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Person Met"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/personMet"
+                    android:layout_marginRight="30dp"
+                    android:inputType="textPersonName"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Designation of Person Met"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/desigOfPersonMet"
+                    android:layout_marginRight="30dp"
+                    android:inputType="textPersonName"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Person Contact Number"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/personContactNo"
+                    android:layout_marginRight="30dp"
+                    android:inputType="textPersonName"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Does the applicant Work"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/doesApplicantWork"
+                    >
+                </Spinner>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Office Telephone"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/officeTelephone"
+                    android:layout_marginRight="30dp"
+                    android:inputType="textPersonName"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Office Name Board Seen"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/officeNameBoardSeen"
+                    >
+                </Spinner>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Type of Organisation"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/organisationType"
+                    ></Spinner>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Date of Joining / No. of years in present employment"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dateOfJoining"
+                    android:inputType="number"
+                    android:layout_marginRight="30dp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Visiting Card Obtained"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/visitingCardObtained"
+                    >
+                </Spinner>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Nature of Busniess"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/natureOfBusi"
+                    >
+                </Spinner>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Type Of Job"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/typeOfJob"
+                    >
+                </Spinner>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Working as"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/workingAs"
+                    >
+                </Spinner>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Whether job is transferable"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/jobTransferable"
+                    >
+                </Spinner>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Ease To Locate"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/easeToLocate"
+                    >
+                </Spinner>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="No of Emp"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="top"
+                    android:inputType="textPersonName"
+                    android:id="@+id/noOfEmp"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Person Contacted"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="top"
+                    android:inputType="textPersonName"
+                    android:id="@+id/personContacted"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Designation"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="top"
+                    android:inputType="textPersonName"
+                    android:id="@+id/designation"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Name of Reporting Manager"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="top"
+                    android:inputType="textPersonName"
+                    android:id="@+id/nameOfReportingManager"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Designation of Reporting Manager"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="top"
+                    android:inputType="textPersonName"
+                    android:id="@+id/designOfReportingManager"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Contact Number of Reporting Manager"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="top"
+                    android:inputType="textPersonName"
+                    android:id="@+id/contactNoOfReportingManager"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Salary"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="top"
+                    android:inputType="textPersonName"
+                    android:id="@+id/salary"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="TPC Confirmation."
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/tpcConfirmation"
+                    >
+                </Spinner>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="TPC Person Name"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="top"
+                    android:inputType="textPersonName"
+                    android:id="@+id/tpcPersonName"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Overall Status."
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/overallStatus"
+                    >
+                </Spinner>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Reason for Negative FI(If Any)"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ee4242"
+                        />
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/reasonfornegativeFI"
+                    >
+                </Spinner>
+
+
                 <Button
                     android:id="@+id/refresh"
                     android:layout_marginTop="40dp"

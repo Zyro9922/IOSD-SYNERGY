@@ -342,6 +342,53 @@
         <item>REFFERAL</item>
     </string-array>
 
+    <string-array name="typeOfLocalityDD">
+        <item>COMMERCIAL</item>
+        <item>RESIDENTIAL</item>
+        <item>RESI CUM COMMERCIAL</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="typeofOrganisationDD">
+        <item>GOVT/PUBLIC LTD</item>
+        <item>MNC</item>
+        <item>PVT LTD</item>
+        <item>PARTNERSHIP</item>
+        <item>NGO</item>
+        <item>PROPRIETORSHIP</item>
+        <item>OTHER</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="workingAs">
+        <item>"EXECUTIVE"</item>
+        <item>"SUPERVISOR"</item>
+        <item>"JUNIOR MANAGEMENT"</item>
+        <item>"MIDDLE/SR. MANAGEMENT"</item>
+        <item>"OTHER MANAGEMENT"</item>
+    </string-array>
+
+    <string-array name="easy_locateDD">
+        <item>EASY</item>
+        <item>DIFFICULT</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="positiveNegativeDD">
+        <item>POSITIVE</item>
+        <item>NEUTRAL</item>
+        <item>NEGATIVE</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="reasonForNegative">
+        <item>NA</item>
+        <item>NOT WORKING</item>
+        <item>OFFICE DOES NOT EXIST</item>
+        <item>NOT READY TO CO-OPERATE</item>
+        <item>OTHER REASON</item>
+    </string-array>
+
     <!--divyanshu-->
 
 
