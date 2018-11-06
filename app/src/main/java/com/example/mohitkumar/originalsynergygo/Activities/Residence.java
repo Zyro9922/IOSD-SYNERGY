@@ -634,38 +634,56 @@ public class Residence extends AppCompatActivity {
                     params.put("tablename","coappl2_residence");
                 }
 
-//                params.put("REFNO",filestr);
-//                params.put("DATEVISIT",date);
-//                params.put("TIMEVISIT",time);
-//                params.put("PERSONMET",sname);
-//                params.put("RELATIONAPPL",srelapp);
-//                params.put("PERSONPHONE",smob);
-//                params.put("NOOFYEARS",snoyears);
-//                params.put("DOBAPPL",sdoba);
-//                params.put("EDUQUAL",seduqual);
-//                params.put("RESISTATUS",sresidence);
-//                params.put("MARITALSTATUS",smaritalStatus);
-//                params.put("NOOFFAMILY",snoFamilyMem);
-//                params.put("WORKING",sworkingMem);
-//                params.put("ADULTSDEP",sdependMem);
-//                params.put("CHILDDEP",schildren);
-//                params.put("SPOUSEWORK",sspousework);
-//                params.put("SPOUSEEMP",sspouseEmp);
-//                params.put("COOPERATIVE",sclientcoop);
-//                params.put("NEIGHBORHOOD",sncheck);
-//                params.put("LOCALITY",slocality);
-//                params.put("AMBIENCE",sambience);
-//                params.put("CARPETAREA",scarpetArea);
-//                params.put("NAPPLSTAY",saddlock);
-//                params.put("NNOOFFAMILY",snnoff);
-//                params.put("WHEELER2",stwo);
-//                params.put("WHEELER4",sfour);
-//                Log.d("LATT",latt);
-//                params.put("LATITUDE",latt);
-//                params.put("LONGITUDE",longi);
-//
-//                params.put("RECOMM",srecomm);
-//                params.put("REMARKS",sotherRemarks);
+              params.put("REFNO",filestr);
+                params.put("DATEVISIT",date);
+                params.put("TIMEVISIT",time);
+
+                params.put("CASENO",scaseNo);
+                params.put("LOCATION",slocation);
+                params.put("NAME",sapplicantName);
+                params.put("ADDRESS",saddress);
+                params.put("ALTNO",salternateTelephone);
+                params.put("FOSNAME",sfosName);
+                params.put("AGE",sage);
+                params.put("LANDMARK",slandmark);
+                params.put("STAYINGSINCE",sstayingSince);
+                params.put("PERCONTACTED",spersonContacted);
+                params.put("FAMILYMEM",snoFamilyMem);
+                params.put("WORKING",sworking);
+                params.put("DEPENDMEMAD",sdependMemAdult);
+                params.put("DEPENDMEMCH",sdependMemChild);
+                params.put("RETIREDPEN",sretiredorpensioner);
+                params.put("SPOUSEEMP",sspouseEmp);
+                params.put("NEIBNAME1",sneibhourName1);
+                params.put("NEIBNAME2",sneibhourName2);
+                params.put("ADD1",saddress1);
+                params.put("ADD2",saddress2);
+                params.put("ADDPROOF",saddProof);
+
+                params.put("PDANO",spdaNo);
+                params.put("EASETOLOC",seasetoLocate);
+                params.put("TYPEOFLOC",stypeOfLocality);
+                params.put("TYPEOFHOU",stypeOfHouse);
+                params.put("HOUSECONDI",shouseCondition);
+                params.put("OWENERSHIP",sownership);
+                params.put("LIVINGSTAND",sstandardOfLiving);
+                params.put("APPLISTAY",sdoesApplicantStay);
+                params.put("RELATIONSHIP",srelationship);
+                params.put("EXTERIOR",sexterior);
+                params.put("SPOUSEEARNING",sspouseEarning);
+                params.put("MARITIALST",smaritalStatus);
+                params.put("EDUCATIONQUAL",seducationQualification);
+                params.put("NEIBFEED",sneighbourFeedback);
+                params.put("ACCOMTYPE",saccomodationType);
+                params.put("VEHICLESEEN",svehicleSeen);
+                params.put("POLITICALLINK",spoliticalLink);
+                params.put("OVERALLSTATUS",soverallStatus);
+                params.put("RESONFORNEG",sresonfornegativeFI);
+
+
+                Log.d("LATT",latt);
+                params.put("LATITUDE",latt);
+                params.put("LONGITUDE",longi);
 
                 return params;
             }
