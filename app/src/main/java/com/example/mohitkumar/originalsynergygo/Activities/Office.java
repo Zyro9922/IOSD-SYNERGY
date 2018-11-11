@@ -520,28 +520,55 @@ public class Office extends AppCompatActivity {
                     params.put("tablename","coappl2_employment");
                 }
 
-//
-//                params.put("REFNO",filestr);
-//                params.put("PERSONMET",sname);
-//                params.put("DESIGNAPPL",sdesigApp);
-//                params.put("PERSONDESIGN",sdesignation);
-//                params.put("PERSONPHONE",smobile);
-//                params.put("NOOFYEARS",snoYears);
-//                params.put("ORGNAME",sorgname);
-//                params.put("ORGNATURE",scompanyNature);
-//                params.put("JOBTYPE",sjobType);
-//                params.put("WORKINGAS",sworkOrg);
-//                params.put("TRANSFERABLE",sjobTransfer);
-//                params.put("SALARYPERSON",sdetsalary);
-//                params.put("SALARYDESIGN",sdetvarsal);
-//                params.put("RECOMM",recom);
-//                params.put("REMARKS",sremarks);
-//                Log.d("LONG",longi);
-//                params.put("LATITUDE",latt);
-//                params.put("LONGITUDE",longi);
-//
-//                params.put("DATEVISIT",date);
-//                params.put("TIMEVISIT",time);
+
+                params.put("REFNO",filestr);
+
+                 params.put("CASENO",scaseNo);
+                params.put("LOCATION",slocation);
+                params.put("NAME",sapplicantName);
+                params.put("ADDRESS",saddress);
+                params.put("ALTTEL",salternateTelephone);
+                params.put("CLEINTNAME",sdsaClientName);
+                params.put("FOSNAME",sfosName);
+                params.put("COMPANTYNAME",scompanyName);
+                params.put("LANDMARK",slandmark);
+                params.put("DESIGN",sdesignationofApplicant);
+                params.put("PERSONMET",spersonMet);
+                params.put("DESIGNOFPERMET",sdesignationOfPersonMet);
+                params.put("PERSONCONTACT",spersonContact);
+                params.put("OFFICETELE",sofficeTelephone);
+                params.put("DATEOFJOINING",sdateOfJoining);
+                params.put("NOOFEMP",snoOfEmp);
+                params.put("PERSONCONTACTED",spersoncontacted);
+                params.put("DESIGNATION",sdesignation);
+                params.put("NAMEOFREPMANAGER",snameOfreportManager);
+                params.put("DESIGOFREPMANAGER",sdesignationOfReportManager);
+                params.put("CONTOFREPMANAGER",scontactOfReportManager);
+                params.put("SALARY",ssalary);
+                params.put("STPCPERSONNAME",stpcPersonName);
+
+                params.put("PDANO",spdaNo);
+                params.put("TYPEOFLOC",stypeOfLocality);
+                params.put("ADDRESSCONF",saddressConfirmed);
+                params.put("APPICATIONWORK",sdoesapplicantWork);
+                params.put("OFFICENAMEBOARD",sofficeNameBoardSeen);
+                params.put("TYPEOFORG",stypeOfOrganisation);
+                params.put("VISITINGCARD",svisitingCardObtained);
+                params.put("NATUREOFBUSI",snatureOfBusiness);
+                params.put("JOBTYPE",sjobType);
+                params.put("WORKINGAS",sworkingAs);
+                params.put("JOBTRANS",swhetherJobisTransferrable);
+                params.put("EASETOLOC",seasetoLocate);
+                params.put("STCPCONFIRM",stcpConfirmation);
+                params.put("OVERALLSTAT",soverallStatus);
+                params.put("REASONFORNEG",sreasonForNegative);
+
+                Log.d("LONG",longi);
+                params.put("LATITUDE",latt);
+                params.put("LONGITUDE",longi);
+
+                params.put("DATEVISIT",date);
+                params.put("TIMEVISIT",time);
                 return params;
 
             }
